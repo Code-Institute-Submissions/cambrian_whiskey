@@ -1,102 +1,177 @@
+
 {% block nav %}
 
-<!-- <header id="navbar" class="sticky"> -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+<style>
+  
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-        <!-- <a class="navbar-brand title" href="/"><img src="\media\images\profile.png" width='45' height="40" alt="Cambrian Whiskey"></a> -->
+.topnav {
+  overflow: hidden;
+  background-color: #f3f3f3;
+}
 
-        <!-- {% comment %} Mobile Menu Hamburger {% endcomment %} -->
+.nav-link {
+  color: #9d6f4d !important;
+  font-size: 20px !important;
+}
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
 
-            <ul class="navbar-nav mr-auto">
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Whiskey List <span class="sr-only">(current)</span></a>
-                </li>
+.topnav .icon {
+  display: none;
+}
 
-                <li class="nav-item">
-                    <a href="{% url 'about' %}" class="nav-link">About</a>
-                </li>
+@media screen and (max-width:576px) {
+  .topnav a {
+  padding-left: 15px;
+  margin-left: 15px;
+  font-size: 20px !important;
+  }
+}
 
-                <li class="nav-item">
-                    <a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
-                </li>
+@media screen and (max-width:381px) {
+  .nav-search-button {
+    margin-top: 10px;
+  }
+}
 
-            </ul>
-            
-            <!--Hidden on mobile as caused too much in the navbar -->
-            <div class="align-center mx-auto collapse navbar-collapse" id="searchbar">
+@media screen and (min-width: 768px) {
+  .topnav a {
+  margin-left: 40px;
+  }
+}
 
-                <form class="form-inline my-2 my-lg-0 ml-auto" action="{% url 'search' %}" method="GET">
-                    <input type="text" placeholder="Search" aria-label="Search" name="q" required
-                    value={{ request.GET.q }}>
-                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+@media screen and (min-width: 992px) {
+  .topnav a {
+    margin-left: 0px;
+  }
 
-            </div>
+  .topnav {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
 
-            <!-- <div class="align-center mx-auto collapse navbar-collapse" id="searchbar">
+@media screen and (max-width: 992px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    color: #9d6f4d;
+  }
+}
 
-                <form class="form-inline my-2 my-lg-0 ml-auto" action="{% url 'search' %}" method="GET">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"
-                        name="q" required>
-                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+@media screen and (max-width: 992px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 
-            </div> -->
+@media screen and (min-width: 1440px) {
+  .login-position {
+    float: right;
+  }
+}
 
-            <ul class="navbar-nav ml-auto">
-                {% if user.is_authenticated %}
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                </li>
+</style>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'profile' %} ">Profile</a>
-                </li>
+</head>
 
-                {% else %}
+<body>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Login</a>
-                </li>
+  <nav class="sticky-top">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'registration'%} ">Register</a>
-                </li>
+    <div class="topnav" id="myTopnav">
 
-                {% endif %}
+        <a href="/" class="nav-link"> Whiskey List <span class="sr-only">(current)</span></a>
 
-            </ul>
+        <a href="{% url 'about' %}" class="nav-link">About</a>
 
-            <ul class="navbar-nav ml-auto">
+        <a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
 
-                <li class="nav-item shopping-cart">
+        <a>
 
-                    <a href="{% url 'view_cart' %}" class="nav-link cart-link cart-logo">
-                        <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+            <form action="{% url 'search' %}" method="GET">
 
-                        {% if product_count > 0 %}
+                <input type="text" placeholder="Search" aria-label="Search" name="q" required
+                value={{ request.GET.q }}>
 
-                            <label class="badge badge-warning">{{ product_count }}</label>
+                <button class="nav-search-button btn btn-success" type="submit">Search</button>
 
-                        {% endif %}
+            </form>
 
-                    </a>
+        </a>
 
-                </li>
+        {% if user.is_authenticated %}
 
-            </ul>
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
 
-        </div>
+        {% else %}
 
-    </nav>
-<!-- </header> -->
+        <a class="nav-link login-position" href="{% url 'login' %}">Login</a>
+        <a class="nav-link login-position" href="{% url 'registration'%} ">Register</a>
+
+        {% endif %}
+
+        <a href="{% url 'view_cart' %}" class="nav-link login-position cart-link cart-logo">
+
+            <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+
+            {% if product_count > 0 %}
+
+                <label class="badge badge-warning">{{ product_count }}</label>
+
+            {% endif %}
+
+        </a>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </nav>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+
 {% endblock %}

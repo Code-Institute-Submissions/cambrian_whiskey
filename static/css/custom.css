@@ -6,6 +6,12 @@ body {
 
 /* navigation */
 
+#navbarSupportedContent {
+  position: relative;
+  background-color: #f3f3f3;
+  /* z-index: 1; */
+}
+
 .navbar {
   font-size: 18px;
   padding-bottom: 0px;
@@ -454,6 +460,12 @@ body {
   }
 }
 
+@media screen and (min-width:991px) {
+  .login-position {
+    float: right !important;
+  }
+}
+
 /* End of Footer */
 
 .icon-bar {
@@ -494,6 +506,10 @@ body {
 }
 
 /* Products html file */
+
+.topnav a:hover {
+  background-color: none !important;
+}
 
 .product-card-box {
   margin-bottom: 10px;
