@@ -6,6 +6,19 @@ body {
 
 /* navigation */
 
+
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none;
+  height: 58px;
+}
+
+.search-button-login-gap {
+  margin-bottom: 0px;
+  height: 30px;
+}
+
 #navbarSupportedContent {
   position: relative;
   background-color: #f3f3f3;
@@ -334,6 +347,16 @@ body {
   }
 }
 
+  button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
+    cursor: pointer;
+    height: 30px;
+    margin-top: -3px;
+    font-size: 15px;
+    padding: 0px;
+    width: 80px;
+  }
+
+
 @media (max-width:767px)
 {
   .site-footer
@@ -375,6 +398,24 @@ body {
     margin-left: auto !important;
     margin-right: auto !important;
   }
+  .search-button-login-gap {
+    margin-bottom: 0px;
+    /* height: 30px; */
+}
+
+button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
+  cursor: pointer;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  padding: 0px;
+  width: 80px;
+}
+
+.trial {
+  margin-top: 50px;
+}
 }
 
 .social-icons
@@ -756,6 +797,12 @@ label {
   color: #fff;
   background-color: #9d6f4d;
   margin-top: -15px;
+  font-size: 12px;
+}
+
+.fa-shopping-cart:before {
+  content: "\f07a";
+  font-size: 35px;
 }
 
 .cart-logo {

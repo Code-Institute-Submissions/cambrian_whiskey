@@ -120,7 +120,7 @@ body {
 
         <a>
 
-            <form action="{% url 'search' %}" method="GET">
+            <form action="{% url 'search' %}" method="GET" class="search-button-login-gap">
 
                 <input type="text" placeholder="Search" aria-label="Search" name="q" required
                 value={{ request.GET.q }}>
@@ -133,16 +133,16 @@ body {
 
         {% if user.is_authenticated %}
 
-        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+        <a class="nav-link login-position" href="{% url 'logout' %}">Logout</a>
 
         {% else %}
 
-        <a class="nav-link login-position" href="{% url 'login' %}">Login</a>
+        <a class="trial nav-link login-position" href="{% url 'login' %}">Login</a>
         <a class="nav-link login-position" href="{% url 'registration'%} ">Register</a>
 
         {% endif %}
 
-        <a href="{% url 'view_cart' %}" class="nav-link login-position cart-link cart-logo">
+        <a href="{% url 'view_cart' %}" class="nav-link login-position cart-logo">
 
             <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
 
