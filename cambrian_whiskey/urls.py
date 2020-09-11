@@ -23,9 +23,12 @@ from cart import urls as urls_cart
 from search import urls as urls_search
 from checkout import urls as urls_checkout
 from home import urls as urls_home
+from contact import urls as urls_contact
 from products.views import all_products_view
 from django.views import static
 from .settings import MEDIA_ROOT
+# from contact import get_contact
+from contact.views import contact
 
 # If there is no name after the slash in the url we will just display the all_products
 
@@ -40,5 +43,6 @@ urlpatterns = [
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
+    url(r'^contact/', include(urls_contact)),
 
 ]
