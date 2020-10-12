@@ -5,7 +5,7 @@ from products.models import Product
 from .forms import ContactForm
 from django.core.mail import send_mail
 from django.contrib import messages
-from .models import contact
+from .models import Contact
 
 
 # Create your views here.
@@ -37,7 +37,7 @@ def contact(request):
               and shall be back with you shortly""")
           form.save()
           return redirect('products')
-          context = {'form': form}
+          
 
 
-  return render(request, 'contact.html', context)
+  return render(request, 'contact.html', context = {'form': form})
