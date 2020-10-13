@@ -107,6 +107,18 @@ The project has multiple pages that provide different features and options.
 
 ## Testing
 
+I have tested the application manually on the basis of going over my UX section and ensure they all work as intended with the project providing an easy and straightforward way for the users to achieve their goals.
+
+All the pages have been tested by going from one page to the other and seeing if it loads correctly. The search box was a feature i made sure worked properly. I typed a small part from a title for a whiskey in the application and see if it loads the whiskeys that match those specific words, i also tried some incorrect words. It worked as intended.
+
+I tested the forms on both the Registration and Contact Us pages, and that the data is passed to my administration panel and that it was saved. From that, i would test that i could Login in the login.html page. I tried logging in with correct username but incorrect password and vice versa. Also i intentionally filled the user input details in the registration form, for example, an email address without @ and a different password to the password confirmation. 
+
+I added an item i wanted to purchase and went through the process of buying it, in multiple scenarios, like adding an item on 4 different whiskeys and going from the cart page to the checkout and testing the Stripe software. I also tried buying an item without logging in which you can't which is what i wanted. 
+
+I concentrated on producing a intuitative project where logic and functionality is at its core. I kept my design to be usable and simple to navigate with readable font faces and breathable spacing (i.e. negative space).
+
+As the site is built with a responsive design it works for mobiles, ipad and desktop. I used the development tools on google to make sure the different size devices scalability worked.
+
 
 
 ## Deployment
