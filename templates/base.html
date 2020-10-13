@@ -1,6 +1,6 @@
 <!-- main structure for pages across the site -->
 
-<!-- a template tag that says load staticfiles and this basically tells django that we first of all need to load the staticfiles which will allow us to use the static URL which will then tell us to tell django where our static directory lives -->
+<!-- a template tag that says load static files and this basically tells django that we first of all need to load the static files which will allow us to use the static URL which will then tell us to tell django where our static directory lives -->
 {% load staticfiles %}
 
 <html>
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    <!-- inject block head_js here so that the javascript that were going to write in checkout.html will only be injected into base.html when we are clicking on the checkout -->
+    
 
   </head>
 
@@ -76,6 +76,7 @@
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+<!-- inject block head_js here so that the javascript that were going to write in checkout.html will only be injected into base.html when we are clicking on the checkout -->
   
   {% block head_js %}
   {% endblock %}
