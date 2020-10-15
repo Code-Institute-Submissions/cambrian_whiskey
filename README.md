@@ -64,7 +64,7 @@ In this projects directory is a folder [Wireframe](wireframe.pdf). In that folde
 ## Features
 
 The project has multiple pages that provide different features and options.
-  + **homepage** is the base of the project and provides the following features: navigation bar, a image/description/price, and option to buy feature. At the bottom is the footers section.
+  + **Homepage** is the base of the project and provides the following features: navigation bar, a image/description/price, and option to buy feature. At the bottom is the footers section.
 
   + **About** Gives you a description of the history of the company
 
@@ -74,7 +74,7 @@ The project has multiple pages that provide different features and options.
 
   + **Login/Registration** If a customer has not registered, in order to buy an item they must, therefore i provide a registration page to fill. If you have a registered you are also provided woth a login page
 
-  + **cart** A cart for when you add an item to be purchased. It provides you with the description of the item and a summary
+  + **Cart** A cart for when you add an item to be purchased. It provides you with the description of the item and a summary
 
   + **Checkout** For a customer to finalise the order through providing your delivery address and payment
 
@@ -125,7 +125,7 @@ In order for the success of the deployment version, i would create an environmen
 
 In the development phase of my application it was important to keep the security of my configuration variables private, because even though my application wasnt in deployment at that stage, in order to work on the development stage i still had to upload my code to github for the changes in my application to take place. 
 
-Hosting the development version was used using the url local host **127.0.0.1:5000/**. This is issued in your local command terminal after inputting **python3 manage.py** in the command terminal. When you make new features/functions in your IDE you refresh your development version browser and the changes will be seen live. However to make a permanent change to an updated file you then will have to use git in your command terminal to make those changes which then will be stored in your GITHUB repository.
+Hosting the development version was used using the url local host **http://127.0.0.1:8000/**. This is issued in your local command terminal after inputting **python3 manage.py** in the command terminal. When you make new features/functions in your IDE you refresh your development version browser and the changes will be seen live. However to make a permanent change to an updated file you then will have to use git in your command terminal to make those changes which then will be stored in your GITHUB repository.
 
 With Heroku an updated application will be uploaded automatically once you update your github repository as Heroku uses your chosen **deployment method** i.e. Github and **master branch** as every push to master will deploy a new version of the app. 
 
