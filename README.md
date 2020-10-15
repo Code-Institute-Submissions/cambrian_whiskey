@@ -61,8 +61,8 @@ This particular plane focuses on:
 
 In this projects directory is a folder **wireframe**. In that folder i have designed a mockup of my inital plan for the project. I have designed it so that i have the flexibility if needed to alter something, whether it be the functionality, the color scheme, fonts etc as i progress through the project. Its not good practice to set anything in stone from the start but important to have an idea of the structure of the application.
 
-Here is a list of my wireframes with ideas to building this project
-  + [Wireframe](C:\Users\aledg\OneDrive\Desktop\cambrian_whiskey\wireframe.pdf)
+Here is my wireframe with ideas to building this project
+  + [Wireframe](wireframe.pdf)
   
 
 ## Features
