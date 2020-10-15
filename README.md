@@ -59,11 +59,7 @@ This particular plane focuses on:
   - Navigation design
   - Interface design
 
-In this projects directory is a folder **wireframe**. In that folder i have designed a mockup of my inital plan for the project. I have designed it so that i have the flexibility if needed to alter something, whether it be the functionality, the color scheme, fonts etc as i progress through the project. Its not good practice to set anything in stone from the start but important to have an idea of the structure of the application.
-
-Here is my wireframe with ideas to building this project
-  + [Wireframe](wireframe.pdf)
-  
+In this projects directory is a folder [Wireframe](wireframe.pdf). In that folder i have designed a mockup of my inital plan for the project. I have designed it so that i have the flexibility if needed to alter something, whether it be the functionality, the color scheme, fonts etc as i progress through the project. Its not good practice to set anything in stone from the start but important to have an idea of the structure of the application.
 
 ## Features
 
