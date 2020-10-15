@@ -87,7 +87,7 @@ The project has multiple pages that provide different features and options.
   + Python
     + Python is used for the back-end functionality of this project
   + Javascript
-    + Javascript was used for the functionality of the hamburger (navigation) bar
+    + Javascript was used for the functionality of the hamburger (navigation) bar and the stripe software for the money transactions
   + HTML5
     + Used to construct the structure of the front-end of the project
   + CSS/Bootstrap
