@@ -174,8 +174,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # our MEDIAFILES_LOCATION will be media, so any directory called media
-# MEDIAFILES_LOCATION = 'media'
-# DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 # the following MESSAGE_STORAGE is to fix an issue we have with cloud 9. but im not on cloud 9 so i will uncomment
 
@@ -198,26 +198,26 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET')
     # import env
 
 
-# AWS_S3_OBJECT_PARAMETERS = {
-#     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-#     'CacheControl': 'max-age=94608000',
-# }
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000',
+}
 
-# AWS_STORAGE_BUCKET_NAME = 'cambrian-whiskey'
-# AWS_S3_REGION_NAME = 'eu-west-2'
-# AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = 'cambrian-whiskey'
+AWS_S3_REGION_NAME = 'eu-west-2'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 # cambrian-whiskey.s3.amazonaws.com
 
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 # Pretty sure we dont need that STATICFILES_LOCATION for local settings for running in local production.
 
 # the below syntax STATICFILES_LOCATION is meant to be commented out for when running locally but i uncommented it and the files in the static folder still work, i.e custom.css 
-# STATICFILES_LOCATION = 'static'
+STATICFILES_LOCATION = 'static'
 
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 # IN PRODUCTION - CODE INSTITUTE found an issue in a video so instead of :MEDIA_URL = '/media/' WHICH I WILL USE IN LOCAL PRODUCTION they tell us to input the following:
