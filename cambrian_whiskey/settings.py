@@ -159,7 +159,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # media_url is the reference URL for browser to access the files over Http
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
 
 # MEDIA_ROOT is for server path to store files in the computer.
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -192,10 +192,10 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 
 # PRODUCTION CONFIGURATION
 
-# import dj_database_url
+import dj_database_url
 
-# if os.path.exists('env.py'):
-    # import env
+if os.path.exists('env.py'):
+    import env
 
 
 AWS_S3_OBJECT_PARAMETERS = {
@@ -222,5 +222,5 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # IN PRODUCTION - CODE INSTITUTE found an issue in a video so instead of :MEDIA_URL = '/media/' WHICH I WILL USE IN LOCAL PRODUCTION they tell us to input the following:
 
-# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
