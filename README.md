@@ -10,7 +10,7 @@ In this project, I will build a full-stack site where the consumer can buy an it
 
 I will focus on building this application to be visually appealing and user friendly. It will be simple to navigate and understand with features for users to locate specific items, to navigate through to paying for the item/items and the paying process will be secure and efficient using the stripe software.
 
-This project can be viewed [here](herokuapp.com/)
+This project can be viewed [here](https://cambrian-whiskey.herokuapp.com/)
 
 ## User Experience Design
 --------------------------
@@ -62,9 +62,8 @@ This particular plane focuses on:
 In this projects directory is a folder **wireframe**. In that folder i have designed a mockup of my inital plan for the project. I have designed it so that i have the flexibility if needed to alter something, whether it be the functionality, the color scheme, fonts etc as i progress through the project. Its not good practice to set anything in stone from the start but important to have an idea of the structure of the application.
 
 Here is a list of my wireframes with ideas to building this project
-  + [index page](https://raw.githubusercontent.com/aledgriffiths79/cookbook/master/wireframe/home-page.png)
-  + [recipes page](https://raw.githubusercontent.com/aledgriffiths79/cookbook/master/wireframe/Recipes.png)
-  + [add/edit recipe page](https://raw.githubusercontent.com/aledgriffiths79/cookbook/master/wireframe/form-recipes.png)
+  + [Wireframe](C:\Users\aledg\OneDrive\Desktop\cambrian_whiskey\wireframe.pdf)
+  
 
 ## Features
 
