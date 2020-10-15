@@ -19,6 +19,13 @@ import os
 # import env
 import dj_database_url
 
+# PRODUCTION CONFIGURATION
+
+import dj_database_url
+
+if os.path.exists('env.py'):
+    import env
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -190,12 +197,7 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 
-# PRODUCTION CONFIGURATION
 
-import dj_database_url
-
-if os.path.exists('env.py'):
-    import env
 
 
 AWS_S3_OBJECT_PARAMETERS = {
