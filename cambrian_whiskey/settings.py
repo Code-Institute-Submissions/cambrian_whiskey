@@ -17,7 +17,7 @@ import os
 # When running locally use import env:
 
 # import env
-import dj_database_url
+# import dj_database_url
 
 # PRODUCTION CONFIGURATION
 
